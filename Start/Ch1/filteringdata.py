@@ -10,7 +10,9 @@ with open("../../sample-weather-history.json", "r") as weatherfile:
 
 # the filter() function gives us a way to remove unwanted data points
 # TODO: create a subset of the data for days that had snowfall
-
+snowdays = list(filter(lambda d:d['snow']>0.0, weatherdata))
+print(len(weatherdata))
+print(len(snowdays))
 
 # TODO: pretty-print the resulting data set
 
